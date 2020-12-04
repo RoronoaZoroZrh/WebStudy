@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>渐变</title>
+	</head>
+	<body>
+		<img src="../common.jpg" name="commonPic" border="1" style="filter:alpha(opacity=0)">
+		<script language="javascript">
+			//捕获异常
+			window.onerror = function (message, url, line) {
+				document.write(message + "<br/>");
+				document.write(url + "<br/>");
+				document.write(line + "<br/>");
+			}
+			//渐变
+			var b = 1, c = true;
+			function Latent() {
+				if (document.all) {
+					if (c == true) {
+						b++;
+					}
+					else {
+						b--;
+					}
+				}
+				if (b == 100) {
+					b--;
+					c = false;
+				}
+				if (b == 10) {
+					b++;
+					c = true;
+				}
+				//document.write(document.getElementById("commonPic"));
+				//commonPic.filters.alpha.opacity = b;
+				setTimeout("Latent()", 25);
+			}
+			Latent();
+		</script>
+	</body>
+</html>
