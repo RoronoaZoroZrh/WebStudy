@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>闪烁</title>
+	</head>
+	<body onload="Glint();">
+		<div ID="div1" STYLE="position:absolute;left:150;top:0">
+			<img name="image1" src="../common.jpg"/>
+		</div>
+		<script language="javascript">	
+			//异常处理
+			window.onerror = function(message, url, line) {
+				document.write(message + "<br/>" + url + "<br/>" + line);
+			}
+			//闪烁
+			var counter = 0;
+			function Glint() {
+				div1.style.visibility = (div1.style.visibility == "hidden") ? "visible" : "hidden";
+				counter++;
+				setTimeout("Glint()", 200);
+			}
+		</script>
+	</body>
+</html>
