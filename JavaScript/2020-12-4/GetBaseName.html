@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<title>GetBaseName</title>
+	</head>
+	<body>
+		<script>
+			//异常处理
+			window.onerror = function (message, url, line) {
+				document.write(message + "<br/>" + url + "<br/>" + line);
+			}
+			function ShowBaseName(fileSpec) {
+				alert(new ActiveXObject("Scripting.FileSystemObject").GetBaseName(fileSpec));
+			}
+			ShowBaseName("D:\\Word\\Test.html");
+		</script>
+	</body>
+</html>
