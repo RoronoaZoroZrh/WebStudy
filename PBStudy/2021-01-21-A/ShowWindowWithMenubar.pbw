@@ -1,0 +1,6 @@
+Save Format v3.0(19990112)
+@begin Targets
+ 0 "showwindowwithmenubar.pbt";
+@end;
+DefaultTarget "showwindowwithmenubar.pbt";
+DefaultRemoteTarget "showwindowwithmenubar.pbt";
